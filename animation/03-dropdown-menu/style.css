@@ -18,7 +18,10 @@
   margin: 0;
   background-color: rgb(99, 97, 97);
 
-  display: none;
+  display: block;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: transform 0.5s ease-out;
 }
 
 ul.dropdown-menu li:hover {
@@ -26,7 +29,8 @@ ul.dropdown-menu li:hover {
 }
 
 .visible {
-  display: block;
+  transform: scaleY(1);
+  transition-timing-function: cubic-bezier(.2,.65,.81,1.29);
 }
 
 
